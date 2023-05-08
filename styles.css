@@ -2,10 +2,10 @@
 ::before,
 * {
   box-sizing: border-box;
+  font-family: "Rubik Mono One", sans-serif;
 }
 
 body {
-  display: flex;
   background-color: #003049;
   padding: 10px;
 }
@@ -13,25 +13,68 @@ body {
 .back-img {
   display: flex;
   flex-direction: row;
+  align-content: center;
   flex-wrap: wrap;
   height: 100vh;
-  width: 100vw;
   background-image: url("./img/6604090.gif");
-  background-repeat: no-repeat;
   background-size: cover;
-  /* opacity: 0.75; */
 }
-
+.banner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  color: whitesmoke;
+  font-size: 5rem;
+  font-weight: 900;
+  opacity: 0.85;
+}
 .formFrame {
   display: flex;
+  flex-direction: row;
+
+  align-content: center;
+  width: 50%;
+}
+.boxForm {
+  padding: 3rem;
+  border: 2px solid whitesmoke;
+  font-size: 1rem;
+  color: whitesmoke;
+}
+form {
+  display: flex;
+  flex-direction: row;
   justify-content: center;
-  align-items: center;
-  background-color: #d62828;
-  width: 40rem;
-  opacity: 0.6;
-  overflow: auto;
+  flex-wrap: nowrap;
 }
 
-.boxForm {
-  background-color: #f7800091;
+.box {
+  display: flex;
+  align-content: center;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  padding: 1rem;
+}
+
+label,
+input {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-family: inherit;
+  border-radius: 5px;
+}
+
+input,
+button {
+  background-color: #003049;
+  padding: 0.5rem;
+  color: inherit;
+}
+
+button {
+  padding: 1rem;
+  border-radius: 5px;
 }
