@@ -3,14 +3,14 @@ const password = document.getElementById("password");
 const confirmPassword = document.getElementById("password2");
 const emailAlert = document.getElementById("message");
 const name = document.getElementById("firstName");
-const lastName = document.getElementById("Lastname");
+const lastName = document.getElementById("lastName");
 const phone = document.getElementById("tel");
 const form = document.getElementById("form");
 
-// form.addEventListener("submit", (e) => {
-//   let messages = [];
-//   e.preventDefault();
-// });
+form.addEventListener("submit", (e) => {
+  let messages = [];
+  e.preventDefault();
+});
 
 function emailValidation() {
   //   if (password.value === "" && confirmPassword.value === "") {

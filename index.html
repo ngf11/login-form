@@ -29,7 +29,7 @@
             </div>
             <div class="box">
               <label for="Lastname"> Enter last name:</label>
-              <input type="text" name="name" id="Lastname" required />
+              <input type="text" name="name" id="lastName" required />
             </div>
             <div class="box">
               <label for="tel">Phone number:</label>
@@ -37,7 +37,14 @@
             </div>
             <div class="box">
               <label for="email">Enter email :</label>
-              <input type="email" name="email" id="email" min="8" max="20" />
+              <input
+                type="email"
+                name="email"
+                id="email"
+                min="8"
+                max="20"
+                required
+              />
             </div>
             <div class="box">
               <label for="password">Enter password:</label>
@@ -47,11 +54,12 @@
                 id="password"
                 min="8"
                 max="20"
+                required
               />
             </div>
             <div class="box">
-              <label for="password">Re-Enter password:</label>
-              <input type="password" name="password" id="password2" />
+              <label for="password2">Re-Enter password:</label>
+              <input type="password" name="password" id="password2" required />
             </div>
             <div><span id="message"></span></div>
             <div class="box">
