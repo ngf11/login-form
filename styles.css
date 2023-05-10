@@ -82,6 +82,9 @@ button {
 input:focus {
   border: 5px solid #62ff00;
 }
-input:invalid {
-  border: 5px solid rgba(233, 13, 13, 0.936);
+
+#message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
