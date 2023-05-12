@@ -38,13 +38,3 @@ form.addEventListener("submit", (e) => {
   }
   passwordlength();
 });
-
-function passwordlength() {
-  let messages = [];
-  if (password.value.length <= 8) {
-    messages.push(" Password most be longer then 8 characters");
-  }
-  if (password.value.length >= 20) {
-    messages.push(" Password most be less then 20 characters");
-  }
-}
