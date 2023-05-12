@@ -16,23 +16,35 @@ form.addEventListener("submit", (e) => {
     e.preventDefault();
     alert.innerText = messages.join(", ");
   }
-  console.log(messages);
+  if (lastName.value === "" || lastName.value == null) {
+    messages.push(" Last name is required");
+  }
+  if (messages.length > 0) {
+    e.preventDefault();
+    alert.innerText = messages.join(", ");
+  }
+  if (password.value === confirmPassword.value) {
+    messages.push(" Password Matched");
+
+    alert.innerText = messages.join(", ");
+  } else if (password.value !== confirmPassword.value) {
+    messages.push(" Password not Matched");
+    alert.innerText = messages.join(", ");
+    e.preventDefault();
+  } else {
+    messages.push(" ");
+    alert.innerText = messages.join(", ");
+    e.preventDefault();
+  }
+  passwordlength();
 });
 
-// function emailValidation() {
-//   //   if (password.value === "" && confirmPassword.value === "") {
-//   //     emailAlert.innerText = "";
-//   //   }
-
-//   if (password.value === confirmPassword.value) {
-//     emailAlert.style.color = "green";
-//     emailAlert.innerText = "passwords matching";
-//   }
-
-//   if (password.value != confirmPassword.value) {
-//     emailAlert.style.border = " 5px solid rgba(233, 13, 13, 0.936)";
-//     emailAlert.style.color = "red";
-//     emailAlert.innerText = "passwords  do not matching";
-//   }
-// }
-// emailValidation();
+function passwordlength() {
+  let messages = [];
+  if (password.value.length <= 8) {
+    messages.push(" Password most be longer then 8 characters");
+  }
+  if (password.value.length >= 20) {
+    messages.push(" Password most be less then 20 characters");
+  }
+}

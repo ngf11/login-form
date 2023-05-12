@@ -20,7 +20,7 @@
       </div>
 
       <div class="formFrame">
-        <form id="form" action="./info.html" method="get">
+        <form id="form" action="/" method="get">
           <fieldset class="boxForm">
             <legend>New User Sign-up</legend>
             <div class="box">
@@ -29,7 +29,7 @@
             </div>
             <div class="box">
               <label for="Lastname"> Enter last name:</label>
-              <input type="text" name="name" id="lastName" required />
+              <input type="text" name="name" id="lastName" />
             </div>
             <div class="box">
               <label for="tel">Phone number:</label>
@@ -54,12 +54,23 @@
                 id="password"
                 min="8"
                 max="20"
+                pattern="^(?=.*\d)(?=.*[!@#$%^&*()-+=])(?=.*[a-zA-Z]).{8,20}$"
                 required
               />
             </div>
             <div class="box">
               <label for="password2">Re-Enter password:</label>
-              <input type="password" name="password" id="password2" required />
+              <input
+                type="password"
+                name="password"
+                id="password2"
+                pattern="^(?=.*\d)(?=.*[!@#$%^&*()-+=])(?=.*[a-zA-Z]).{8,20}$"
+                required
+              />
+            </div>
+            <div class="box" id="passMsg">
+              Password Must be 8 to 20 characters, with one special character,
+              and at least one number
             </div>
             <div id="message"></div>
             <div class="box">
